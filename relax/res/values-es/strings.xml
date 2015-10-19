@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="titel_rain">La lluvia</string>
+    <string name="titel_country">País</string>
+    <string name="titel_Night">De noche</string>
+    <string name="titel_Sea">El mar</string>
+    <string name="titel_Forest">Bosque</string>
+    <string name="titel_Mountain">Monte</string>
+    <string name="label_duration">Ajusta la duración (hh:mm)</string>
+    <string name="label_menu_share">Compartir esta aplicación</string>
+
+</resources>

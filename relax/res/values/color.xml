@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- appcolor -->
+    <color name="red">#bf360c</color>
+    <color name="ripple_red">#ffbf5232</color>
+    <color name="material_teal">@color/material_deep_teal_500</color>
+    <color name="ripple_material_teal">#ff149691</color>
+    <color name="transparent">@color/c_yale_blue</color>
+    <color name="blue">#304f9f</color>
+    <color name="grey">@color/material_blue_grey_800</color>
+    <color name="light">@color/primary_material_light</color>
+    <color name="colorPrimary">@color/blue</color>
+    <color name="colorPrimaryDark">@color/blue</color>
+    <color name="windowBackgroundColor">@color/c_eerieblack</color>
+    <color name="c_yale_blue">#0F4D92</color>
+    <color name="c_eerieblack">#1B1B1B</color>
+    <color name="c_medium_sea_green">#3CB371</color>
+    <color name="c_forest_green">#228B22</color>
+    <color name="c_yankeesblue">#1C2841</color>
+
+     <color name="c_light_sky_blue">#87CEFA</color>
+    <color name="c_slate_blue">#6A5ACD</color>
+
+</resources>

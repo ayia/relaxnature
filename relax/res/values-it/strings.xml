@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="titel_rain">La pioggia</string>
+    <string name="titel_country">Nazione</string>
+    <string name="titel_Night">Notte</string>
+    <string name="titel_Sea">Il mare</string>
+    <string name="titel_Forest">Foresta</string>
+    <string name="titel_Mountain">Montagna</string>
+    <string name="label_duration">Imposta durata (hh:mm)</string>
+    <string name="label_menu_share">Condividi app</string>
+
+</resources>

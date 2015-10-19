@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Relax Nature</string>
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+    <string name="titel_rain">Rain</string>
+    <string name="titel_country">Country</string>
+    <string name="titel_Night">Night</string>
+    <string name="titel_Sea">Sea</string>
+    <string name="titel_Forest">Forest</string>
+    <string name="titel_Mountain">Mountain</string>
+    
+    <string name="label_duration">Set duration (hh:mm)</string>
+    <string name="label_share_text">Just found this great app! Find it here:</string>
+    <string name="label_menu_share">Share app</string>
+
+</resources>

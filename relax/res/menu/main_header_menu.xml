@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:compat="http://schemas.android.com/apk/res-auto" >
+    <item
+        android:id="@+id/sharemain"
+        android:icon="@drawable/ic_share_white_48dp"
+        android:title="share"
+        tools:ignore="AppCompatResource"
+        compat:showAsAction="always"/>
+
+    </menu>
+  

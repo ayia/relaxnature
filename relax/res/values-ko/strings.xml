@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="titel_rain">비</string>
+    <string name="titel_country">국가</string>
+    <string name="titel_Night">밤</string>
+    <string name="titel_Sea">바다</string>
+    <string name="titel_Forest">숲</string>
+    <string name="titel_Mountain">산</string>
+    <string name="label_duration">타이머 설정</string>
+    <string name="label_menu_share">이 응용 프로그램을 공유</string>
+
+</resources>

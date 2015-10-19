@@ -106,6 +106,7 @@ public class MainActivity extends ActionBarActivity {
 				.replace(R.id.fragment_container, PlayerFragment)
 				.addToBackStack(null).commit();
 
+		
 	}
 
 	@Override

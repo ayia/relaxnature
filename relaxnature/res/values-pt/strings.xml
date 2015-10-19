@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="titel_rain">Chuva</string>
+    <string name="titel_country">País</string>
+    <string name="titel_Night">Noite</string>
+    <string name="titel_Sea">Mar</string>
+    <string name="titel_Forest">Floresta</string>
+    <string name="titel_Mountain">Montanha</string>
+    
+   <string name="label_duration">Definir a duração (hh:mm)</string>
+   <string name="label_menu_share">Compartilhar esse app</string>
+
+</resources>

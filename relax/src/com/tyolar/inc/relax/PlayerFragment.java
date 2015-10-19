@@ -55,6 +55,9 @@ public class PlayerFragment extends Fragment {
 		selextedindex = 0;
 	
 
+		
+		
+		
 	}
 	@Override
 	public void onResume() {

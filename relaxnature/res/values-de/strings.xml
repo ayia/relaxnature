@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="titel_rain">Regen</string>
+    <string name="titel_country">Land</string>
+    <string name="titel_Night">Übernachtung</string>
+    <string name="titel_Sea">Sea</string>
+    <string name="titel_Forest">Wald</string>
+    <string name="titel_Mountain">Berg</string>
+    <string name="label_duration">Setzt die Dauer</string>
+    <string name="label_menu_share">Teilen diese App</string>
+
+</resources>

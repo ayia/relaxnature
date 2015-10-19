@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="titel_rain">дождь</string>
+    <string name="titel_country">Страна</string>
+    <string name="titel_Night">ночь</string>
+    <string name="titel_Sea">морской</string>
+    <string name="titel_Forest">лес</string>
+    <string name="titel_Mountain">гора</string>
+    <string name="label_duration">Устанавливает длительность</string>
+    <string name="label_menu_share">поделиться этим приложением</string>
+
+</resources>

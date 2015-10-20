@@ -141,7 +141,10 @@ public class MainActivity extends ActionBarActivity {
 	public void onBackPressed() {
 		if (PlayerFragment != null)
 			PlayerFragment.stopPlaying();
-		// Otherwise defer to system default behavior.
+		android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+		if (fragmentManager.getBackStackEntryCount() <= 1) {
+			super.finish();
+		}
 		super.onBackPressed();
 	}
 

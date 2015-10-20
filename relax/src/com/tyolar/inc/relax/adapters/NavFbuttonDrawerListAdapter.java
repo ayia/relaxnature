@@ -4,7 +4,14 @@ import java.util.ArrayList;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -55,8 +62,12 @@ public class NavFbuttonDrawerListAdapter extends BaseAdapter {
 				navDrawerItems.get(position).getImageresource());
 		img.setBounds(10, 0, 60, 60);
 		 d.setCompoundDrawables( img, null, null, null );
-		d.setBackground(context.getResources().getDrawable(
-				navDrawerItems.get(position).getImagebackgrond()));
+		
+		 Bitmap backgroundBitmap = BitmapFactory.decodeResource(context.getResources(), navDrawerItems.get(position).getImagebackgrond());
+		 BitmapDrawable backgroundDrawable = new BitmapDrawable(context.getResources(), backgroundBitmap);
+		 backgroundDrawable.setGravity(Gravity.LEFT|Gravity.RIGHT); // also LEFT, CENTER_VERTICAL, etc.
+		 d.setBackground(backgroundDrawable);
+	
 		d.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

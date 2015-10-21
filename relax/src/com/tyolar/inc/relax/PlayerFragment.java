@@ -79,9 +79,8 @@ public class PlayerFragment extends Fragment {
 			if (!bedMenuItem.isVisible()) {
 
 				AlertDialog.Builder builder = new AlertDialog.Builder(context);
-				final TimerView frameView = new TimerView(context);
+				final TimerView frameView = new TimerView(context,selectedMenu);
 				builder.setView(frameView);
-
 				final AlertDialog alertDialog = builder.create();
 				alertDialog.show();
 
@@ -96,7 +95,7 @@ public class PlayerFragment extends Fragment {
 						int k = Integer.valueOf(String.valueOf(b)
 								+ String.valueOf(C));
 						setTimer(a, k);
-
+						item.setIcon(R.drawable.ic_timer_off_white_48dp);
 						alertDialog.cancel();
 					}
 				});
@@ -112,7 +111,7 @@ public class PlayerFragment extends Fragment {
 					}
 				});
 
-				item.setIcon(R.drawable.ic_timer_off_white_48dp);
+			
 			} else {
 				CountDownTimer.cancel();
 				CountDownTimer = null;

@@ -50,7 +50,7 @@ public class Menu {
 			break;
 		case Rain:
 			this.imageresource = R.drawable.ic_rain;
-			this.backgrounfcolor = R.color.transparent;
+			this.backgrounfcolor = R.color.blue;
 			this.Titel = x.getResources().getString(R.string.titel_rain);
 			this.imagebackgrond=R.drawable.rain_background;
 			this.listsongs=ConstantClass.getRainsongs();

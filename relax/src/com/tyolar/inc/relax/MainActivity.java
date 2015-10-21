@@ -80,8 +80,8 @@ public class MainActivity extends ActionBarActivity {
 	}
 
 	public void settheme(Menu i) {
-		mDrawerList.setBackgroundColor(getResources().getColor(
-				i.getBackgrounfcolor()));
+//		mDrawerList.setBackgroundColor(getResources().getColor(
+//				i.getBackgrounfcolor()));
 		toolbar.setBackgroundColor(getResources().getColor(
 				i.getBackgrounfcolor()));
 		if (PlayerFragment != null)

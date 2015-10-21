@@ -8,7 +8,7 @@
         android:id="@+id/btn"
         style="@android:attr/borderlessButtonStyle"
         android:layout_width="fill_parent"
-        android:layout_height="80dp"
+        android:layout_height="90dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:gravity="left|center_vertical"

@@ -4,11 +4,12 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.text.format.Time;
 import android.view.LayoutInflater;
@@ -19,9 +20,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 import com.tyolar.inc.relax.clazz.Menu;
+import com.tyolar.inc.relax.composant.TimerView;
 
 @SuppressLint("NewApi")
 public class PlayerFragment extends Fragment {
@@ -53,12 +53,8 @@ public class PlayerFragment extends Fragment {
 	public void setSelectedMenu(Menu selectedMenu) {
 		this.selectedMenu = selectedMenu;
 		selextedindex = 0;
-	
-
-		
-		
-		
 	}
+
 	@Override
 	public void onResume() {
 		super.onResume();
@@ -76,13 +72,46 @@ public class PlayerFragment extends Fragment {
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
+	public boolean onOptionsItemSelected(final MenuItem item) {
 		int id = item.getItemId();
 		MenuItem bedMenuItem = mymenu.findItem(R.id.timertext);
 		if (id == R.id.timer) {
 			if (!bedMenuItem.isVisible()) {
-				DialogFragment newFragment = new TimePickerFragment(getme());
-				newFragment.show(getChildFragmentManager(), "timePicker");
+
+				AlertDialog.Builder builder = new AlertDialog.Builder(context);
+				final TimerView frameView = new TimerView(context);
+				builder.setView(frameView);
+
+				final AlertDialog alertDialog = builder.create();
+				alertDialog.show();
+
+				frameView.mStart.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						int a = frameView.getHour();
+						int b = frameView.getMinut();
+						int C = frameView.getMinut2();
+						int k = Integer.valueOf(String.valueOf(b)
+								+ String.valueOf(C));
+						setTimer(a, k);
+
+						alertDialog.cancel();
+					}
+				});
+
+				frameView.mCancel.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						alertDialog.cancel();
+					
+						item.setIcon(R.drawable.ic_timer_white_48dp);
+					}
+				});
+
 				item.setIcon(R.drawable.ic_timer_off_white_48dp);
 			} else {
 				CountDownTimer.cancel();

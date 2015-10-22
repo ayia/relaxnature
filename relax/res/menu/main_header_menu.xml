@@ -1,12 +1,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:compat="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/morapp"
+        android:icon="@drawable/ic_add_circle_outline_white_48dp"
+        android:title="More "
+        compat:showAsAction="always"
+        tools:ignore="AppCompatResource"/>
+    <item
+        android:id="@+id/voteapp"
+        android:icon="@drawable/ic_favorite_white_48dp"
+        android:title="Vote"
+        compat:showAsAction="always"
+        tools:ignore="AppCompatResource"/>
     <item
         android:id="@+id/sharemain"
         android:icon="@drawable/ic_share_white_48dp"
         android:title="@string/label_menu_share"
-        tools:ignore="AppCompatResource"
-        compat:showAsAction="always"/>
+        compat:showAsAction="always"
+        tools:ignore="AppCompatResource"/>
 
-    </menu>
-  
+</menu>

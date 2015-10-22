@@ -4,8 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -20,8 +19,10 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.borax12.materialdaterangepicker.date.DatePickerController;
+import com.borax12.materialdaterangepicker.time.RadialPickerLayout;
+import com.borax12.materialdaterangepicker.time.TimePickerDialog;
 import com.tyolar.inc.relax.clazz.Menu;
-import com.tyolar.inc.relax.composant.TimerView;
 
 @SuppressLint("NewApi")
 public class PlayerFragment extends Fragment {
@@ -77,47 +78,42 @@ public class PlayerFragment extends Fragment {
 		MenuItem bedMenuItem = mymenu.findItem(R.id.timertext);
 		if (id == R.id.timer) {
 			if (!bedMenuItem.isVisible()) {
-
-				AlertDialog.Builder builder = new AlertDialog.Builder(context);
-				final TimerView frameView = new TimerView(context,selectedMenu);
-				builder.setView(frameView);
-				final AlertDialog alertDialog = builder.create();
-				alertDialog.show();
-
-				frameView.mStart.setOnClickListener(new OnClickListener() {
+				TimePickerDialog tpd = TimePickerDialog.newInstance( 
+						null ,
+						0,
+						10, true);
+				
+				tpd.setThemeDark(true);
+				tpd.ban(getFragmentManager(), context.getResources().getString(R.string.label_duration));
+				tpd.setOnTimeSetListener(new TimePickerDialog.OnTimeSetListener(){
 
 					@Override
-					public void onClick(View v) {
+					public void onTimeSet(RadialPickerLayout view,
+							int hourOfDay, int minute, int hourOfDayEnd,
+							int minuteEnd) {
 						// TODO Auto-generated method stub
-						int a = frameView.getHour();
-						int b = frameView.getMinut();
-						int C = frameView.getMinut2();
-						int k = Integer.valueOf(String.valueOf(b)
-								+ String.valueOf(C));
-						setTimer(a, k);
-						item.setIcon(R.drawable.ic_timer_off_white_48dp);
-						alertDialog.cancel();
+						if(!(hourOfDay==0 && minute==0)){
+							setTimer(hourOfDay, minute);
+							
+							item.setIcon(R.drawable.ic_timer_off_white_48dp);
+						}
+						
 					}
-				});
-
-				frameView.mCancel.setOnClickListener(new OnClickListener() {
-
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						alertDialog.cancel();
 					
-						item.setIcon(R.drawable.ic_timer_white_48dp);
-					}
 				});
-
-			
+				tpd.setOnCancelListener(new DialogInterface.OnCancelListener() {
+				    @Override
+				    public void onCancel(DialogInterface dialogInterface) {
+				    	item.setIcon(R.drawable.ic_timer_white_48dp);
+				    }
+				});
+				
 			} else {
 				CountDownTimer.cancel();
 				CountDownTimer = null;
 				bedMenuItem.setVisible(false);
 				item.setIcon(R.drawable.ic_timer_white_48dp);
-				updateui();
+//				updateui();
 			}
 		}
 		if (id == R.id.share) {
